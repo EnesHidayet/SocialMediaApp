@@ -2,14 +2,14 @@ package org.enes.exception;
 
 import lombok.Getter;
 @Getter
-public class AuthServiceException extends RuntimeException{
+public class AuthManagerException extends RuntimeException{
     private final ErrorType errorType;
-    public AuthServiceException(ErrorType errorType) {
+    public AuthManagerException(ErrorType errorType) {
         super(errorType.getMessage());
         this.errorType = errorType;
     }
 
-    public AuthServiceException(ErrorType errorType, String message) {
+    public AuthManagerException(ErrorType errorType, String message) {
         super(message);
         this.errorType = errorType;
     }

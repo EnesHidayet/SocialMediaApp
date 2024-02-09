@@ -9,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RegisterResponseDto {
-    @Size(min = 3, max = 64)
-    @NotNull
     private String username;
+    private String activationCode;
 }

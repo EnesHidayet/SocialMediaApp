@@ -10,13 +10,14 @@ import org.springframework.http.HttpStatus;
 @NoArgsConstructor
 public enum ErrorType {
 
-    INTERNAL_ERROR(1000,"Sunucuda beklenmeyen hata oluştu, lütfen tekrar denetiniz.",HttpStatus.INTERNAL_SERVER_ERROR),
+    INTERNAL_SERVER_ERROR(5100,"Sunucuda beklenmeyen hata oluştu, lütfen tekrar deneyiniz.",HttpStatus.INTERNAL_SERVER_ERROR),
 
-    ERROR_DUPLICATE_USERNAME(2000,"Bu kullanıcı adı zaten kayıtlı.Lütfen değiştirerek tekrar deneyiniz.",HttpStatus.BAD_REQUEST),
+    BAD_REQUEST(4100,"Girilen parametreler hatalıdır.Lütfen düzelterek tekrar deneyiniz.",HttpStatus.BAD_REQUEST),
 
-    BAD_REQUEST_ERROR(1001,"Girilen parametreler hatalıdır.Lütfen düzelterek tekrar deneyiniz.",HttpStatus.BAD_REQUEST),
+    USERNAME_DUPLICATE(4111,"Kullanıcı adı kullanılmaktadır.Lütfen başka bir kullanıcı adı seçiniz.",HttpStatus.BAD_REQUEST),
 
-    ERROR_INVALID_LOGIN_PARAMETER(2001,"Kullanıcı adı ya da şifre hatalıdır.Lütfen tekrar deneyiniz.",HttpStatus.BAD_REQUEST);
+    LOGIN_ERROR(4110,"Kullanıcı adı ya da şifre hatalıdır.Lütfen tekrar deneyiniz.",HttpStatus.BAD_REQUEST),
+    ACTIVATION_ERROR(1001,"Aktivasyon kodu hatalıdır. Lütfen tekrar deneyiniz." ,HttpStatus.BAD_REQUEST);
 
 
 

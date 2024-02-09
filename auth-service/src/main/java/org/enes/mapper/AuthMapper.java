@@ -12,8 +12,8 @@ public interface AuthMapper {
     AuthMapper INSTANCE = Mappers.getMapper(AuthMapper.class);
 
 
-    Auth toAuth(RegisterRequestDto dto);
+    Auth toAuth(final RegisterRequestDto dto);
 
-    RegisterResponseDto toRegisterResponseDto(Auth auth);
+    RegisterResponseDto toRegisterResponseDto(final Auth auth);
 
 }
