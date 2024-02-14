@@ -2,11 +2,10 @@ server:
   port: 7071
 
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/java13UserDB
-    username: postgres
-    password: root
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
+  data:
+    mongodb:
+      host: localhost
+      port: 27020
+      username: java13user
+      password: root
+      database: userdb

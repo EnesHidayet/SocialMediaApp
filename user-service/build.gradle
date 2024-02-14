@@ -5,6 +5,7 @@ buildscript {
 }
 
 dependencies {
-    implementation libs.springBootStarterDataJpa
-    implementation libs.postgreSQL
+//    implementation libs.springBootStarterDataJpa
+//    implementation libs.postgreSQL
+    implementation libs.SpringBootDataMongo
 }

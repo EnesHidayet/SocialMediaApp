@@ -5,6 +5,8 @@ ext{
             mapstruct               : '1.5.5.Final',
             openApi                 : '2.3.0',
             postgreSQL              : '42.7.1',
+            springCloud             : '4.1.0',
+            jwt                     : '4.4.0'
     ]
 
 
@@ -16,6 +18,9 @@ ext{
             mapstruct                       : "org.mapstruct:mapstruct:${versions.mapstruct}",
             mapstructProcessor              : "org.mapstruct:mapstruct-processor:${versions.mapstruct}",
             openApi                         : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.openApi}",
-            postgreSQL                      : "org.postgresql:postgresql:${versions.postgreSQL}"
+            postgreSQL                      : "org.postgresql:postgresql:${versions.postgreSQL}",
+            springOpenFeign                 : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
+            SpringBootDataMongo             : "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBoot}",
+            javaJwt                         : "com.auth0:java-jwt:${versions.jwt}"
     ]
 }

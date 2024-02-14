@@ -10,3 +10,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+
+jwt:
+  secretKey: ${java13secretkey}
+  audience: ${java13audience}
+  issuer: ${java13issuer}

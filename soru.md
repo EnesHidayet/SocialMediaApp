@@ -8,3 +8,5 @@
 ## 3- Validasyon islemlerini yapalim. Aklimiza gelen basit validasyonlari kullanalim.
 
 ## 4- Kullanıcının Statusunu aktif hale getirmek için aktivayson kod doğrulaması yapan bir metot yazınız.
+
+## 5- Auth da status u aktif hale getirdiğimde user servicedeki statusta aktif hale gelsin.

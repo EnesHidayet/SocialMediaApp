@@ -12,10 +12,10 @@ public class RestApiUrl {
     public static final String USER = ROOT + "/user";
 
     public static final String ADD = "/add";
-    public static final String GET_ALL = "/get-all";
-    public static final String GET_BY_ID = "/get-by-id";
+    public static final String FIND_ALL = "/find-all";
+    public static final String FIND_BY_ID = "/find-by-id";
     public static final String DELETE_BY_ID = "/delete-by-id";
     public static final String REGISTER = "/register";
     public static final String LOGIN = "/login";
-    public static final String ACTIVATE = "/activate";
+    public static final String ACTIVATE_STATUS = "/activate-status";
 }

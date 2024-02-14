@@ -2,15 +2,16 @@ package org.enes.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.enes.dto.request.ActivateStatusRequestDto;
 import org.enes.dto.request.LoginRequestDto;
 import org.enes.dto.request.RegisterRequestDto;
 import org.enes.dto.response.RegisterResponseDto;
 import org.enes.service.AuthService;
+import org.enes.utility.JwtTokenManager;
+import org.enes.utility.enums.ERole;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import static org.enes.constants.RestApiUrl.*;
 @RestController
 @RequiredArgsConstructor
@@ -18,20 +19,41 @@ import static org.enes.constants.RestApiUrl.*;
 public class AuthController {
 
     private final AuthService authService;
+    private final JwtTokenManager tokenManager;
 
     @PostMapping(REGISTER)
     public ResponseEntity<RegisterResponseDto> register(@RequestBody @Valid RegisterRequestDto dto) {
-        return ResponseEntity.ok().body(authService.register(dto));
+        return ResponseEntity.ok(authService.register(dto));
     }
 
     @PostMapping(LOGIN)
-    public ResponseEntity<Boolean> login(@RequestBody @Valid LoginRequestDto dto) {
-        return ResponseEntity.ok().body(authService.login(dto));
+    public ResponseEntity<String> login(@RequestBody @Valid LoginRequestDto dto) {
+        return ResponseEntity.ok(authService.login(dto));
     }
 
-    @PostMapping(ACTIVATE)
-    public ResponseEntity<String> activateAccount(String activationCode) {
-        return ResponseEntity.ok().body(authService.activateAccount(activationCode));
+    @PostMapping(ACTIVATE_STATUS)
+    public ResponseEntity<Boolean> activateStatus(@RequestBody ActivateStatusRequestDto dto) {
+        return ResponseEntity.ok(authService.activateStatus(dto));
+    }
+
+    @GetMapping("/create-token")
+    public ResponseEntity<String> createToken(Long id, ERole role){
+        return ResponseEntity.ok(tokenManager.createToken(id,role).get());
+    }
+
+    @GetMapping("/create-token1")
+    public ResponseEntity<String> createToken(Long id){
+        return ResponseEntity.ok(tokenManager.createToken(id).get());
+    }
+
+    @GetMapping("/get-id-from-token")
+    public ResponseEntity<Long> getIdFromToken(String token){
+        return ResponseEntity.ok(tokenManager.getIdFromToken(token).get());
+    }
+
+    @GetMapping("/get-role-from-token")
+    public ResponseEntity<String> getRoleFromToken(String token){
+        return ResponseEntity.ok(tokenManager.getRoleFromToken(token).get());
     }
 
 }

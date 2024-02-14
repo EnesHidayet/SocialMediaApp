@@ -1,0 +1,7 @@
+
+j
+java:S3655-"HCall "auth.isPresent()" or "!auth.isEmpty()" before accessing the value.(ÓÄä¼ûÿÿÿÿ8Œí‘ÁÚ1
+m
+java:S36553"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(”éùË8Œí‘ÁÚ1
+a
+java:S25830"DChange this condition so that it does not always evaluate to "false"(İÆŞ¥8í‘ÁÚ1

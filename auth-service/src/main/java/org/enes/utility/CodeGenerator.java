@@ -1,4 +1,4 @@
-package org.enes.utility.enums;
+package org.enes.utility;
 
 import java.util.UUID;
 

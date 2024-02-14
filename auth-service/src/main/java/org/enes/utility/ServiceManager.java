@@ -1,8 +1,9 @@
-package org.enes.utility.enums;
+package org.enes.utility;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.enes.entity.BaseEntity;
+import org.enes.utility.IService;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
