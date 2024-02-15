@@ -24,7 +24,9 @@ public enum ErrorType {
 
     INVALID_TOKEN(4114,"Geçersiz Token." ,HttpStatus.BAD_REQUEST),
 
-    USER_NOT_ACTIVE(1415,"Hesabın aktifleştirilmesi gereklidir.Lütfen aktifleştirip tekrar deneyiniz." ,HttpStatus.BAD_REQUEST );
+    USER_NOT_ACTIVE(4115,"Hesabın aktifleştirilmesi gereklidir.Lütfen aktifleştirip tekrar deneyiniz." ,HttpStatus.FORBIDDEN ),
+
+    TOKEN_NOT_CREATED(4116,"Token oluşturulamadı." ,HttpStatus.BAD_REQUEST );
 
 
 

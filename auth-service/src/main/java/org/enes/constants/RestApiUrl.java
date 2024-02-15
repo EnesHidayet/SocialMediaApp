@@ -12,6 +12,7 @@ public class RestApiUrl {
     public static final String USER = ROOT + "/user";
 
     public static final String ADD = "/add";
+    public static final String UPDATE = "/update";
     public static final String FIND_ALL = "/find-all";
     public static final String FIND_BY_ID = "/find-by-id";
     public static final String DELETE_BY_ID = "/delete-by-id";

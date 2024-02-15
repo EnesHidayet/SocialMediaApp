@@ -3,6 +3,7 @@ package org.enes.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.enes.dto.request.ActivateStatusRequestDto;
+import org.enes.dto.request.AuthUpdateRequestDto;
 import org.enes.dto.request.LoginRequestDto;
 import org.enes.dto.request.RegisterRequestDto;
 import org.enes.dto.response.RegisterResponseDto;
@@ -54,6 +55,12 @@ public class AuthController {
     @GetMapping("/get-role-from-token")
     public ResponseEntity<String> getRoleFromToken(String token){
         return ResponseEntity.ok(tokenManager.getRoleFromToken(token).get());
+    }
+
+    @PutMapping(UPDATE)
+    public ResponseEntity<Boolean> updateEmail(@RequestBody AuthUpdateRequestDto dto){
+        authService.updateEmail(dto);
+        return ResponseEntity.ok(true);
     }
 
 }

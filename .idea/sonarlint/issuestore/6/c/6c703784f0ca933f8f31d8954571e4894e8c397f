@@ -1,2 +1,4 @@
 
-o	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì±ØŸıÿÿÿÿ8Š˜í”Ú1
+o	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì±ØŸıÿÿÿÿ8ı†çÚ1
+u
+java:S1128"SRemove this unused import 'org.springframework.cloud.openfeign.EnableFeignClients'.(Š˜Â®ıÿÿÿÿ8·âğçÚ1

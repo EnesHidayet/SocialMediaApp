@@ -2,6 +2,7 @@ package org.enes.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.enes.dto.request.CreateUserRequestDto;
+import org.enes.dto.request.UserProfileUpdateRequestDto;
 import org.enes.entity.UserProfile;
 import org.enes.service.UserProfileService;
 import org.springframework.http.ResponseEntity;
@@ -29,5 +30,10 @@ public class UserProfileController {
     @GetMapping(FIND_ALL)
     public ResponseEntity<List<UserProfile>> findAll(){
         return ResponseEntity.ok(userProfileService.findAll());
+    }
+
+    @PutMapping(UPDATE)
+    public ResponseEntity<Boolean> update(@RequestBody UserProfileUpdateRequestDto dto){
+        return ResponseEntity.ok(userProfileService.update(dto));
     }
 }

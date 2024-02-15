@@ -1,6 +1,7 @@
 package org.enes.mapper;
 
 import org.enes.dto.request.CreateUserRequestDto;
+import org.enes.dto.request.UserProfileUpdateRequestDto;
 import org.enes.entity.UserProfile;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
@@ -11,5 +12,7 @@ public interface UserProfileMapper {
 
     UserProfileMapper INSTANCE = Mappers.getMapper(UserProfileMapper.class);
 
-    UserProfile fromCreateRequestToUserProfile(CreateUserRequestDto dto);
+    UserProfile fromCreateRequestToUserProfile(final CreateUserRequestDto dto);
+
+    UserProfile fromUpdateRequestToUserProfile(final UserProfileUpdateRequestDto dto);
 }

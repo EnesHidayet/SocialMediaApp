@@ -1,6 +1,7 @@
 package org.enes.service;
 
 import org.enes.dto.request.ActivateStatusRequestDto;
+import org.enes.dto.request.AuthUpdateRequestDto;
 import org.enes.dto.request.LoginRequestDto;
 import org.enes.dto.request.RegisterRequestDto;
 import org.enes.dto.response.RegisterResponseDto;
@@ -42,13 +43,16 @@ public class AuthService extends ServiceManager<Auth, Long> {
 
     public String login(LoginRequestDto dto) {
         Optional<Auth> auth = authRepository.findByUsernameAndPassword(dto.getUsername(), dto.getPassword());
-        if(!auth.get().getStatus().equals(EStatus.ACTIVE)){
-            throw new AuthManagerException(ErrorType.USER_NOT_ACTIVE);
-        }
         if (auth.isEmpty()){
             throw new AuthManagerException(ErrorType.LOGIN_ERROR);
         }
-        return manager.createToken(auth.get().getId()).get();
+        if(!auth.get().getStatus().equals(EStatus.ACTIVE)){
+            throw new AuthManagerException(ErrorType.USER_NOT_ACTIVE);
+        }
+        return manager.createToken(auth.get().getId(),auth.get().getRole()).
+                orElseThrow(() -> {
+                    throw new AuthManagerException(ErrorType.TOKEN_NOT_CREATED);
+                });
     }
 
 
@@ -65,5 +69,15 @@ public class AuthService extends ServiceManager<Auth, Long> {
         }else {
             throw new AuthManagerException(ErrorType.ACTIVATION_CODE_ERROR);
         }
+    }
+
+    public Boolean updateEmail(AuthUpdateRequestDto dto){
+        Optional<Auth> auth = authRepository.findById(dto.getId());
+        if (auth.isEmpty()){
+            throw new AuthManagerException(ErrorType.USER_NOT_FOUND);
+        }
+        auth.get().setEmail(dto.getEmail());
+        update(auth.get());
+        return true;
     }
 }
