@@ -2398,8 +2398,6 @@ z
 Jelastic-service/src/main/java/org/enes/rabbitmq/model/CreateUserModel.java,8\d\8dcd722420ffcb41476fec3ab6fa6ec06c2a4b21
 I
 post-service/build.gradle,d\e\de2cd75a8df89200ef3d98b3e4125c7b87d5a64b
-]
--post-service/src/main/java/org/enes/Main.java,6\5\65a248926af2f359128590889ffb517d93205b4f
 d
 4post-service/src/main/java/org/enes/entity/Post.java,c\f\cfe6a060a733f0e54b6cbab41802af3909699669
 d
@@ -2412,7 +2410,5 @@ t
 Duser-service/src/main/java/org/enes/repository/FollowRepository.java,3\f\3f88fd35d02fd4bdb1dfe93e305e121f51250868
 n
 >user-service/src/main/java/org/enes/service/FollowService.java,7\8\78b42973b00387c4d32d5fc082a96fd9ef1ef4a0
-t
-Duser-service/src/main/java/org/enes/controller/FollowController.java,d\c\dc29455272b07c084deb9bd8baeeba52512a4e23
 u
 Euser-service/src/main/java/org/enes/dto/request/FollowRequestDto.java,1\a\1ace2f1505a40b4a070ad43520275bf92b841df8
