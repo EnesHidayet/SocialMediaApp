@@ -1,0 +1,15 @@
+
+i
+java:S2259F"GA "NullPointerException" could be thrown; "getCache()" can return null.(¹®†öþÿÿÿÿ8Ãã¶®Ý1
+j
+java:S2259Å"GA "NullPointerException" could be thrown; "getCache()" can return null.(¹ô¢ïÿÿÿÿÿ8Ãã¶®Ý1
+j
+java:S2259Î"GA "NullPointerException" could be thrown; "getCache()" can return null.(´Àã—üÿÿÿÿ8Ãã¶®Ý1
+i
+java:S2259T"GA "NullPointerException" could be thrown; "getCache()" can return null.(¹®†öþÿÿÿÿ8É£‚¯Ý1
+]	java:S125?"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8Éã¶®Ý1
+X	java:S125A"<This block of commented-out lines of code should be removed.(ñ±™Œ8Éã¶®Ý1
+
+java:S2142¼"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ß•Äøÿÿÿÿ8Ùã¶®Ý1
+J
+java:S1602Ø",Remove useless curly braces around statement(æ©”Ð8Ûã¶®Ý1

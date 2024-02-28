@@ -10,12 +10,15 @@ public class RestApiUrl {
 
     public static final String AUTH = ROOT + "/auth";
     public static final String USER = ROOT + "/user";
+    public static final String FOLLOW = ROOT + "/follow";
 
     public static final String CREATE = "/create";
     public static final String UPDATE = "/update";
     public static final String FIND_ALL = "/find-all";
     public static final String FIND_BY_ID = "/find-by-id";
     public static final String DELETE_BY_ID = "/delete-by-id";
+    public static final String DELETE = "/delete";
+    public static final String DELETE_BY_TOKEN = "/delete-by-token";
     public static final String ACTIVATION = "/activation";
 
 }

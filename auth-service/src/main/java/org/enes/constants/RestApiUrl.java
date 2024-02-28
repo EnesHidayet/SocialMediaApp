@@ -16,6 +16,7 @@ public class RestApiUrl {
     public static final String FIND_ALL = "/find-all";
     public static final String FIND_BY_ID = "/find-by-id";
     public static final String DELETE_BY_ID = "/delete-by-id";
+    public static final String DELETE_BY_TOKEN = "/delete-by-token";
     public static final String REGISTER = "/register";
     public static final String LOGIN = "/login";
     public static final String ACTIVATE_STATUS = "/activate-status";

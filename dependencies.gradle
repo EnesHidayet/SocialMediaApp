@@ -21,6 +21,14 @@ ext{
             postgreSQL                      : "org.postgresql:postgresql:${versions.postgreSQL}",
             springOpenFeign                 : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
             SpringBootDataMongo             : "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBoot}",
-            javaJwt                         : "com.auth0:java-jwt:${versions.jwt}"
+            javaJwt                         : "com.auth0:java-jwt:${versions.jwt}",
+            springCloudStarterConfig        : "org.springframework.cloud:spring-cloud-starter-config:${versions.springCloud}",
+            springCloudConfigClients        : "org.springframework.cloud:spring-cloud-config-client:${versions.springCloud}",
+            springCloudConfigServer         : "org.springframework.cloud:spring-cloud-config-server:${versions.springCloud}",
+            springBootStarterDataRedis      : "org.springframework.boot:spring-boot-starter-data-redis:${versions.springBoot}",
+            springBootStarerAmqp            : "org.springframework.boot:spring-boot-starter-amqp:${versions.springBoot}",
+            SpringBootMailSender            : "org.springframework.boot:spring-boot-starter-mail:${versions.springBoot}",
+            springBootStarterDataElasticsearch  : "org.springframework.boot:spring-boot-starter-data-elasticsearch:${versions.springBoot}"
+
     ]
 }

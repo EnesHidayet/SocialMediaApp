@@ -18,7 +18,11 @@ public enum ErrorType {
 
     USER_NOT_FOUND(4212,"Böyle bir kullanıcı bulunamadı." ,HttpStatus.BAD_REQUEST),
 
+    FOLLOW_NOT_FOUND(4212,"Böyle bir takip isteği bulunamadı." ,HttpStatus.BAD_REQUEST),
+
     INVALID_TOKEN(4214,"Geçersiz Token." ,HttpStatus.BAD_REQUEST),
+
+    FOLLOW_DUPLICATE(4215,"Takip edilen biri tekrar takip edilemez." ,HttpStatus.BAD_REQUEST),
 
     USER_NOT_CREATED(4213,"Kullanıcı oluşturulamadı." ,HttpStatus.BAD_REQUEST );
 

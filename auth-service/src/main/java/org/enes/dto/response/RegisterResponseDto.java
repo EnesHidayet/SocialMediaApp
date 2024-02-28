@@ -10,5 +10,4 @@ import lombok.*;
 @NoArgsConstructor
 public class RegisterResponseDto {
     private String username;
-    private String activationCode;
 }

@@ -1,4 +1,16 @@
 
-o	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì±ØŸıÿÿÿÿ8ı†çÚ1
-u
-java:S1128"SRemove this unused import 'org.springframework.cloud.openfeign.EnableFeignClients'.(Š˜Â®ıÿÿÿÿ8·âğçÚ1
+g	java:S112E"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Å·ÒŞ1
+i
+java:S2259f"GA "NullPointerException" could be thrown; "getCache()" can return null.(ù Ü™üÿÿÿÿ8è·ÒŞ1
+i
+java:S2259g"GA "NullPointerException" could be thrown; "getCache()" can return null.(¹®†öşÿÿÿÿ8è·ÒŞ1
+a
+java:S2259"CA "NullPointerException" could be thrown; "idler" is nullable here.(œªå®8è·ÒŞ1
+o	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì±ØŸıÿÿÿÿ8ò·ÒŞ1
+{
+java:S2142D"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8ó·ÒŞ1
+G	java:S106H"+Replace this use of System.out by a logger.(Ø¼¢ƒ8õ·ÒŞ1
+
+java:S2142€"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ß•Äøÿÿÿÿ8ƒ¸ÒŞ1
+J
+java:S1602",Remove useless curly braces around statement(œªå®8‡¸ÒŞ1

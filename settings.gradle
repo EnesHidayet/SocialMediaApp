@@ -1,4 +1,9 @@
 rootProject.name = 'SocialMediaApp'
 include 'auth-service'
 include 'user-service'
+include 'config-server-git'
+include 'config-server'
+include 'mail-service'
+include 'elastic-service'
+include 'post-service'
 

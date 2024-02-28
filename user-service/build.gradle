@@ -8,4 +8,8 @@ dependencies {
 //    implementation libs.springBootStarterDataJpa
 //    implementation libs.postgreSQL
     implementation libs.SpringBootDataMongo
+    implementation libs.springCloudConfigClients
+    implementation libs.springBootStarterDataRedis
+    implementation libs.springBootStarerAmqp
+    implementation libs.springOpenFeign
 }

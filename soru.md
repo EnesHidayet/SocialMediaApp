@@ -14,3 +14,7 @@
 ## 6- Login metodunu revize edelim bize token dönsün statüsü aktif olmayan kullanıcılar giriş yapamasın.
 
 ## 7- User'da email'imi değişirken auth'da da değişsin istiyorum. Bunun için user-service'den -> auth-service'e bir feign client bağlantısı gerçekleştirelim.
+
+## 8- Auth da soft delete çalıştığında userda da çalışsın
+
+## 9- delete metodunu her iki servis icin de token ile calisir hale getirelim.

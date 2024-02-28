@@ -7,11 +7,14 @@ import org.enes.dto.request.AuthUpdateRequestDto;
 import org.enes.dto.request.LoginRequestDto;
 import org.enes.dto.request.RegisterRequestDto;
 import org.enes.dto.response.RegisterResponseDto;
+import org.enes.entity.Auth;
 import org.enes.service.AuthService;
 import org.enes.utility.JwtTokenManager;
 import org.enes.utility.enums.ERole;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 import static org.enes.constants.RestApiUrl.*;
 @RestController
@@ -27,6 +30,11 @@ public class AuthController {
         return ResponseEntity.ok(authService.register(dto));
     }
 
+    @PostMapping("/register-with-rabbitmq")
+    public ResponseEntity<RegisterResponseDto> registerWithRabbitMq(@RequestBody @Valid RegisterRequestDto dto) {
+        return ResponseEntity.ok(authService.registerWithRabbitMq(dto));
+    }
+
     @PostMapping(LOGIN)
     public ResponseEntity<String> login(@RequestBody @Valid LoginRequestDto dto) {
         return ResponseEntity.ok(authService.login(dto));
@@ -35,6 +43,11 @@ public class AuthController {
     @PostMapping(ACTIVATE_STATUS)
     public ResponseEntity<Boolean> activateStatus(@RequestBody ActivateStatusRequestDto dto) {
         return ResponseEntity.ok(authService.activateStatus(dto));
+    }
+
+    @PostMapping("/activate-status-with-rabbitmq")
+    public ResponseEntity<Boolean> activateStatusWithRabbitMq(@RequestBody ActivateStatusRequestDto dto) {
+        return ResponseEntity.ok(authService.activateStatusRabbitMq(dto));
     }
 
     @GetMapping("/create-token")
@@ -63,4 +76,29 @@ public class AuthController {
         return ResponseEntity.ok(true);
     }
 
+    @DeleteMapping(DELETE_BY_TOKEN)
+    public ResponseEntity<Boolean> softDeleteByToken(@RequestParam String token){
+        return ResponseEntity.ok(authService.softDeleteByToken(token));
+    }
+
+    @GetMapping("get-string")
+    public ResponseEntity<String> getString(String value){
+        return ResponseEntity.ok(authService.getString(value));
+    }
+
+    @DeleteMapping("redis-delete")
+    public ResponseEntity<Boolean> redisDelete(){
+        return ResponseEntity.ok(authService.redisDelete());
+    }
+
+
+    @DeleteMapping("redis-delete2")
+    public ResponseEntity<Boolean> redisDelete(String value){
+        return ResponseEntity.ok(authService.redisDelete2(value));
+    }
+
+    @GetMapping("find-by-role")
+    public ResponseEntity<List<Long>> findByRole(@RequestParam ERole role){
+        return ResponseEntity.ok(authService.findByRole(role));
+    }
 }
